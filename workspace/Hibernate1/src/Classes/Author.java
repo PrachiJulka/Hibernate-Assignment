@@ -28,7 +28,7 @@ import org.hibernate.annotations.Cascade;
 public class Author {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.TABLE)
 	
 	@Column(name="authID")
 	private int id;

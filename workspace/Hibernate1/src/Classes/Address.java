@@ -1,8 +1,8 @@
 package Classes;
 
 import javax.persistence.Embeddable;
-
-@Embeddable
+//Q10 Create a class Address for Author with instance variables streetNumber, location, State.
+//@Embeddable
 public class Address {
 	private int streetNumber;
 	private String location;

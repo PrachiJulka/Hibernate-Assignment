@@ -22,7 +22,8 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
-//Q9 Generate Id for Author Using IDENTITY and TABLE starategy.
+//Q11 Create instance variable of Address class inside Author class and save it as embedded object.
+
 @Entity
 @Table(name="Author")
 public class Author {
@@ -49,7 +50,21 @@ public class Author {
 	@Column(name="Age")
 	private int age;
 
+	@Embedded
+	private Address add;
 	
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
+	public Address getAdd() {
+		return add;
+	}
+	public void setAdd(Address add) {
+		this.add = add;
+	}
 	public int getId() {
 		return id;
 	}

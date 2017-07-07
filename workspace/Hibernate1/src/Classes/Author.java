@@ -22,6 +22,7 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
+//Q7 Mark lastName as @Transient.
 
 @Entity
 @Table(name="Author")
@@ -40,6 +41,7 @@ public class Author {
 	@Column(name="FirstName")
 	private String firstName;
 	
+	@Transient
 	@Column(name="LastName")
 	private String lastName;
 	

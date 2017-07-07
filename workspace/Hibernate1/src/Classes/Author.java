@@ -34,8 +34,8 @@ public class Author {
 	private int id;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Date")
-	private Date date;
+	@Column(name="DateOfBirth")
+	private Date dateOfBirth;
 	
 	@Column(name="FirstName")
 	private String firstName;
@@ -56,11 +56,11 @@ public class Author {
 		this.id = id;
 	}
 	
-	public Date getDate() {
-		return date;
+	public Date getdateOfBirth() {
+		return dateOfBirth;
 	}
-	public void setDate(Date date) {
-		this.date = date;
+	public void setdateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
 	}
 	
 	

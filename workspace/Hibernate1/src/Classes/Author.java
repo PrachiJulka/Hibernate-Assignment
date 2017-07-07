@@ -22,8 +22,7 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
-//Q7 Mark lastName as @Transient.
-
+//Q8 Use @Temporal for date of birth of Author.
 @Entity
 @Table(name="Author")
 public class Author {

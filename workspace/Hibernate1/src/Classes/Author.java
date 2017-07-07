@@ -22,21 +22,27 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
-//Q8 Use @Temporal for date of birth of Author.
+//Q9 Generate Id for Author Using IDENTITY and TABLE starategy.
 @Entity
 @Table(name="Author")
 public class Author {
 	
 	@Id
-	//@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	
 	@Column(name="authID")
 	private int id;
 	
 	@Temporal(TemporalType.DATE)
-	@Column(name="Date")
-	private Date date;
+	@Column(name="DateOFBirth")
+	private Date dateOfBirth;
 	
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 	@Column(name="FirstName")
 	private String firstName;
 	
@@ -54,13 +60,6 @@ public class Author {
 	}
 	public void setId(int id) {
 		this.id = id;
-	}
-	
-	public Date getDate() {
-		return date;
-	}
-	public void setDate(Date date) {
-		this.date = date;
 	}
 	
 	

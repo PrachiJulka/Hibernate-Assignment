@@ -22,7 +22,7 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
-//Q12 Introduce a List of subjects for author.
+//Q15 Implement One to One mapping between Author and Book.
 @Entity
 @Table(name="Author")
 public class Author {
@@ -51,6 +51,14 @@ public class Author {
 
 	@Embedded
 	private Address add;
+	@OneToOne
+	private Book book;
+	public Book getBook() {
+		return book;
+	}
+	public void setBook(Book book) {
+		this.book = book;
+	}
 	@ElementCollection
 	private List<String> subjects=new ArrayList<>();
 	

@@ -13,6 +13,7 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.ManyToMany;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
@@ -51,16 +52,7 @@ public class Author {
 
 	@Embedded
 	private Address add;
-	  @OneToMany
-	    List<Book> buk=new ArrayList<>();
-	    
-	    public List<Book> getBuk() {
-	        return buk;
-	    }
-	    public void setBuk(List<Book> buk) {
-	        this.buk = buk;
-	    }
-
+	
 	@ElementCollection
 	private List<String> subjects=new ArrayList<>();
 	

@@ -8,29 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.ManyToMany;
 import javax.persistence.ManyToOne;
 
+//Q14 Create an Entity book with an instance variable bookName
 @Entity
 public class Book {
-	@Id
-	private int bid;
-	private String bookName;
-	@ManyToOne
-	private Author auth;
 	
-public Author getAuth() {
-		return auth;
-	}
-
-	public void setAuth(Author auth) {
-		this.auth = auth;
-	}
-
-public int getBid() {
-		return bid;
-	}
-
-	public void setBid(int bid) {
-		this.bid = bid;
-	}
+	private String bookName;
 
 
 public String getBookName() {

@@ -78,8 +78,6 @@ public class Author {
 	public void setId(int id) {
 		this.id = id;
 	}
-	
-
 	public Date getdateOfBirth() {
 		return dateOfBirth;
 	}

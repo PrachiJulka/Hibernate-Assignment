@@ -6,7 +6,7 @@ import javax.persistence.Embeddable;
 public class Address {
 	private int streetNumber;
 	private String location;
-	private int State;
+	private String State;
 	public int getStreetNumber() {
 		return streetNumber;
 	}

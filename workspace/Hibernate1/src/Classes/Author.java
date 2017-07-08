@@ -52,7 +52,17 @@ public class Author {
 
 	@Embedded
 	private Address add;
-	
+	 
+	@OneToMany(mappedBy="auth",cascade=CascadeType.PERSIST)
+	    List<Book> buk=new ArrayList<>();
+	    
+	    public List<Book> getBuk() {
+	        return buk;
+	    }
+	    public void setBuk(List<Book> buk) {
+	        this.buk = buk;
+	    }
+
 	@ElementCollection
 	private List<String> subjects=new ArrayList<>();
 	

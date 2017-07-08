@@ -14,22 +14,25 @@ import javax.persistence.OneToOne;
 //Q15 Implement One to One mapping between Author and Book.
 @Entity
 public class Book {
-	public int getBid() {
-		return bid;
-	}
-
-	public void setBid(int bid) {
-		this.bid = bid;
-	}
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int bid;
-
 	private String bookName;
-
-	
-
+	@ManyToOne
+	private Author auth;
+	public Author getAuth() {
+		return auth;
+	}
+	public void setAuth(Author auth) {
+		this.auth = auth;
+	}
+	public int getBid() {
+		return bid;
+	}
+	public void setBid(int bid) {
+		this.bid = bid;
+	}
 public String getBookName() {
 	return bookName;
 }

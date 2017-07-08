@@ -51,14 +51,16 @@ public class Author {
 
 	@Embedded
 	private Address add;
-	@OneToOne
-	private Book book;
-	public Book getBook() {
-		return book;
-	}
-	public void setBook(Book book) {
-		this.book = book;
-	}
+	  @OneToMany
+	    List<Book> buk=new ArrayList<>();
+	    
+	    public List<Book> getBuk() {
+	        return buk;
+	    }
+	    public void setBuk(List<Book> buk) {
+	        this.buk = buk;
+	    }
+
 	@ElementCollection
 	private List<String> subjects=new ArrayList<>();
 	

@@ -22,8 +22,7 @@ import javax.persistence.Transient;
 
 import org.hibernate.annotations.Cascade;
 
-//Q11 Create instance variable of Address class inside Author class and save it as embedded object.
-
+//Q12 Introduce a List of subjects for author.
 @Entity
 @Table(name="Author")
 public class Author {
@@ -52,7 +51,15 @@ public class Author {
 
 	@Embedded
 	private Address add;
+	@ElementCollection
+	private List<String> subjects=new ArrayList<>();
 	
+	public List<String> getSubjects() {
+		return subjects;
+	}
+	public void setSubjects(List<String> subjects) {
+		this.subjects = subjects;
+	}
 	public Date getDateOfBirth() {
 		return dateOfBirth;
 	}
